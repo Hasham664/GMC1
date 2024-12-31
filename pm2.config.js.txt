@@ -1,0 +1,16 @@
+module.exports = {
+  apps: [
+    {
+      name: "gmc-realty",
+      script: "node",
+      args: "server.js", // Replace with the actual entry point of your Node.js app
+      instances: 1, // Number of instances to run, you can adjust this based on your server's resources
+      autorestart: true,
+      watch: false, // Set to true if you want to watch for file changes and automatically restart the app
+      max_memory_restart: "1G", // Adjust this based on your server's memory
+      env: {
+        NODE_ENV: "production", // Set the appropriate environment (production, development, etc.)
+      },
+    },
+  ],
+};
